@@ -1,3 +1,3 @@
 # Protein MD Repo
 <br>
-Auther Abhay Pandey
+Auther - Abhay Pandey (AliveAbhay)
