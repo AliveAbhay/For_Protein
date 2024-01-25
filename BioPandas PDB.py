@@ -1,7 +1,7 @@
 import biopandas.pdb
 import numpy as np
 # Load PDB file
-pdb_file_path = 'For Protein/PDB_Files/1qht.pdb'
+pdb_file_path = 'For_Protein/PDB_Files/1qht.pdb'
 biopdb = biopandas.pdb.PandasPdb().read_pdb(pdb_file_path)
 
 # Display basic information about the PDB file
@@ -10,12 +10,10 @@ print(biopdb.df['ATOM'].head(10))
 
 # Access specific information about atoms
 print("\nAtom Information:")
-print("Atom Names:")
-print(biopdb.df['ATOM']['atom_name'].tolist())
-print("Residue Names:")
-print(biopdb.df['ATOM']['residue_name'].tolist())
+print("Atom Names:", biopdb.df['ATOM']['atom_name'].head())
+print("Residue Names:", biopdb.df['ATOM']['residue_name'].head())
 print("Coordinates:")
-print(biopdb.df['ATOM'][['x_coord', 'y_coord', 'z_coord']].head(10))
+print(biopdb.df['ATOM'][['x_coord', 'y_coord', 'z_coord']].head())
 
 # Calculate and display the center of mass
 coordinates = biopdb.df['ATOM'][['x_coord', 'y_coord', 'z_coord']].values
