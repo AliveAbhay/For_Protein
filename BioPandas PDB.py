@@ -1,7 +1,7 @@
 import biopandas.pdb
 import numpy as np
 # Load PDB file
-pdb_file_path = 'For Protein/Protein Files PDB/1qht.pdb'
+pdb_file_path = 'For Protein/PDB_Files/1qht.pdb'
 biopdb = biopandas.pdb.PandasPdb().read_pdb(pdb_file_path)
 
 # Display basic information about the PDB file
